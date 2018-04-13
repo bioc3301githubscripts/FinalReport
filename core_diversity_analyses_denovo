@@ -1,7 +1,7 @@
 #!/bin/bash --login
-#PBS -l walltime=02:00:00
-#PBS -l select=1:ncpus=24
-#PBS -N 2018_denovo_core_diversity
+#PBS -l walltime=04:00:00
+#PBS -l select=1:ncpus=72
+#PBS -N 2018_core_diversity_denovo
 #PBS -A d411-training
 cd $PBS_O_WORKDIR
 module load miniconda/python2
@@ -9,11 +9,11 @@ export TMPDIR=~/qiime_tmp
 echo "loading virtualenv"
 source activate qiime1
 core_diversity_analyses.py \
--i ~/2018_02_smb/
+-i ~/2018_02_smb/denovo_otus/otu_table.biom \
 -o ~/2018_02_smb/core_diversity/denovo_otus \
 -m ~/2018_02_smb/map.tsv \
--e 
+-e 765 \
 -a \
--O 12 \
+-O 36 \
 --nonphylogenetic_diversity
 source deactivate
