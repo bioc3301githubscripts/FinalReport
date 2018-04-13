@@ -1,6 +1,6 @@
 #!/bin/bash --login
 #PBS -l walltime=04:00:00
-#PBS -l select=1:ncpus=36
+#PBS -l select=1:ncpus=24
 #PBS -N 2018_closed_core_diversity
 #PBS -A d411-training
 cd $PBS_O_WORKDIR
@@ -15,9 +15,8 @@ core_diversity_analyses.py \
 -t ~/2018_02_smb/closed_otus_greengenes/97_otus.tree \
 -e 605 \
 -a \
--O 18
+-O 12
 source deactivate
-
 
 
 
