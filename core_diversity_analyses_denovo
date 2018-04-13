@@ -10,10 +10,10 @@ echo "loading virtualenv"
 source activate qiime1
 core_diversity_analyses.py \
 -i ~/2018_02_smb/
--o ~/2018_02_smb/core_diversity/denovo_otus
+-o ~/2018_02_smb/core_diversity/denovo_otus \
 -m ~/2018_02_smb/map.tsv \
--t ~/SILVA_128_QIIME_release/trees/97/97_otus.tre \
 -e 
 -a \
--O 12
+-O 12 \
+--nonphylogenetic_diversity
 source deactivate
