@@ -18,4 +18,5 @@ core_diversity_analyses.py \
 --nonphylogenetic_diversity
 source deactivate
 
-scp -r l0123263@login.cirrus.ac.uk:~/2018_02_smb/core_diversity/denovo_otus ~/Users/kristal/Desktop .
+scp -r l0123263@login.cirrus.ac.uk:~/2018_02_smb/core_diversity/denovo ~/Users/kristal/Desktop/analysis .
+scp -r l0123263@login.cirrus.ac.uk:~/2018_02_smb/core_diversity/closed_otus ~/Users/kristal/Desktop/analysis .
