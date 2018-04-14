@@ -17,3 +17,18 @@ compare_categories.py \
 -c SamplePh \
 -n 999
 source deactivate
+
+output
+Call:
+adonis(formula = as.dist(qiime.data$distmat) ~ qiime.data$map[[opts$category]],      permutations = opts$num_permutations) 
+
+Permutation: free
+Number of permutations: 999
+
+Terms added sequentially (first to last)
+
+                                Df SumsOfSqs MeanSqs F.Model      R2 Pr(>F)
+qiime.data$map[[opts$category]]  1    0.2006 0.20063  1.1311 0.03883  0.108
+Residuals                       28    4.9665 0.17737         0.96117       
+Total                           29    5.1671                 1.00000       
+adonis_results.txt (END)
