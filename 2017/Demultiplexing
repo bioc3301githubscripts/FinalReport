@@ -14,5 +14,5 @@ split_libraries_fastq.py \
 -o ~/2017_03_smb/split_libraries \
 -b ~/2017_03_smb/Index.fastq.gz \
 -q 19 \
---rev_comp_barcode --rev_comp_mapping_barcodes
+--barcode_type 12
 source deactivate
