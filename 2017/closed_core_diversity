@@ -1,3 +1,5 @@
+biom summarize-table -i ~/2017_03_smb/closed_otus/otu_table.biom
+
 #!/bin/bash --login
 #PBS -l walltime=04:00:00
 #PBS -l select=1:ncpus=24
@@ -10,10 +12,10 @@ echo "loading virtualenv"
 source activate qiime1
 core_diversity_analyses.py \
 -i ~/2017_03_smb/closed_otus/otu_table.biom \
--o ~/2017_03_smb/core_diversity_closed_otus \
+-o ~/2017_03_smb/core_div_closed \
 -m ~/2017_03_smb/map.tsv \
 -t ~/2017_03_smb/closed_otus/97_otus.tree \
--e  \
+-e  564292 \
 -a \
 -O 12
 source deactivate
