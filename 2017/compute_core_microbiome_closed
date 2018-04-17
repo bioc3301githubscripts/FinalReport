@@ -10,5 +10,5 @@ echo "loading virtualenv"
 source activate qiime1
 compute_core_microbiome.py \
 -i ~/2017_03_smb/closed_otus/otu_table.biom \
--o ~/2017_03_smb/closed_coremicrobiome
+-o ~/2017_03_smb/core_microbiome
 source deactivate
