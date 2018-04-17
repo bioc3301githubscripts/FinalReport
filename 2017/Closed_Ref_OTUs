@@ -9,8 +9,8 @@ export TMPDIR=~/qiime_tmp
 echo "loading virtualenv"
 source activate qiime1
 pick_closed_reference_otus.py \
--i ~/2018_02_smb/split_libraries/seqs.fna \
--o ~/2018_02_smb/closed_otus_greengenes \
+-i ~/2017_03_smb/split_libraries/seqs.fna \
+-o ~/2017_03_smb/closed_otus \
 -a \
 -O 18
 source deactivate
