@@ -1,0 +1,16 @@
+#!/bin/bash --login
+#PBS -l walltime=04:00:00
+#PBS -l select=1:ncpus=24
+#PBS -N 2018_grpsig_closed_core_K
+#PBS -A d411-training
+cd $PBS_O_WORKDIR
+module load miniconda/python2
+export TMPDIR=~/qiime_tmp
+echo "loading virtualenv"
+source activate qiime1
+group_significance.py /
+-i ~/2018_02_smb/closed_coremicrobiome/core_table_100.biom \
+-o ~/2018_02_smb/grpsig_closed_core \
+-m ~/2018_02_smb/map.tsv \
+-c Description \
+source deactivate
