@@ -9,7 +9,7 @@ export TMPDIR=~/qiime_tmp
 echo "loading virtualenv"
 source activate qiime1
 make_otu_heatmap.py \
--i ~/2018_02_smb/closed_otus_greengenes/uclust_ref_picked_otus/seqs_otus.txt \
+-i ~/2018_02_smb/closed_otus_greengenes/otu_table.biom \
 -o ~/2018_02_smb/closedotus_heatmap \
 -m ~/2018_02_smb/map.tsv
 source deactivate
