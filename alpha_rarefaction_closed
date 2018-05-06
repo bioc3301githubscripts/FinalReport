@@ -1,0 +1,16 @@
+#!/bin/bash --login
+#PBS -l walltime=04:00:00
+#PBS -l select=1:ncpus=24
+#PBS -N 2018_closed_alpha
+#PBS -A d411-training
+cd $PBS_O_WORKDIR
+module load miniconda/python2
+export TMPDIR=~/qiime_tmp
+echo "loading virtualenv"
+source activate qiime1
+alpha_rarefaction.py \
+-i ~/2018_02_smb/closed_otus_greengenes/otu_table.biom \
+-o ~/2018_02_smb/alpha_closed \
+-m ~/2018_02_smb/map.tsv \
+-t ~/2018_02_smb/closed_otus_greengenes/97_otus.tree
+source deactivate
